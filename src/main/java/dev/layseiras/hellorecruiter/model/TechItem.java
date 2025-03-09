@@ -10,8 +10,6 @@ import lombok.Setter;
 @Table(name = "tech_item")
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 public class TechItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,5 +17,29 @@ public class TechItem {
 
     private String title;
 
-    private String category;
+    private Category category;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 }
